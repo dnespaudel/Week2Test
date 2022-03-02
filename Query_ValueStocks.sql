@@ -22,12 +22,3 @@ SELECT distinct company as value_stocks
 FROM cte2
 WHERE
 	value = 'YES';
-
-
-
-
-
-
-
-
-
