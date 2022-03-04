@@ -18,7 +18,8 @@ SELECT company,
 END) AS "value"
 FROM cte
 )
-SELECT distinct company as value_stocks
+SELECT string_agg(DISTINCT company, ',') as value_stocks
 FROM cte2
 WHERE
-	value = 'YES';
+	value = 'YES'
+;
