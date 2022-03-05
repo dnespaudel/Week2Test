@@ -18,7 +18,7 @@ SELECT company,
 END) AS "value"
 FROM cte
 )
-SELECT array_agg (DISTINCT company || ' ' || '' ) as value_stocks
+SELECT array_agg (DISTINCT company || ' ') as value_stocks
 FROM cte2
 WHERE
 	value = 'YES';
